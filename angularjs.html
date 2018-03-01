@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>
+		Calculator using Angular JS
+	</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <style type="text/css">  
+    	body
+    	{
+    		background-color: #EAAF14
+    	}
+    	button
+    	{
+    		margin-right: 20px;
+    	}
+    </style>
+    <script src="calculator.js"></script>
+</head>
+<body>
+	<div ng-app="Calculator" ng-controller="CalculatorController">
+		<div style="padding-top: 300px">
+			<center>
+				<label> Number1: </label>
+					<input type="number" ng-model ="a"><br>
+				<label> Number2: </label>
+					<input type="number" ng-model ="b">
+				<div class="row mx-auto" style="padding-top: 20px">
+					<div class="col">
+						<button type="button" class="btn btn-indigo" ng-click="add()">Add</button>
+						<button type="button" class="btn btn-indigo" ng-click="subract()">Subract</button>
+						<button type="button" class="btn btn-indigo" ng-click="multiply()">Multipy</button>
+						<button type="button" class="btn btn-indigo" ng-click="divide()">Divide</button>
+					</div>
+					
+				</div>
+				<div class="row" style="padding-top: 20px" >
+                	<div class="col">
+                    	<label>Result: </label>
+                    	<input ng-model="resultText" />
+                	</div>
+            	</div>
+			</center>
+		</div>
+	</div>
+
+</body>
+</html>
